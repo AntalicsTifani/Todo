@@ -1,15 +1,19 @@
 export function kihuzas(){
     let listaElem = document.querySelectorAll("li");
+    let box = document.querySelectorAll(".box")
 
-    for(let i = 0; i < listaElem.length; i = i + 1){
-        listaElem[i].addEventListener("click", function(){
-            if( listaElem[i].classList.contains("kesz")){
-                listaElem[i].classList.remove("kesz");
-            }else{
-                listaElem[i].classList.add("kesz");
-            }
-        })
+    for(let q = 0; q < box.length; q = q + 1){
+        for(let i = 0; i < listaElem.length; i = i + 1){
+            box[q].addEventListener("change", function(e){
+                if(!e.target.checked){
+                    listaElem[q].classList.remove("kesz");
+                }else{
+                    listaElem[q].classList.add("kesz");
+                }
+            })
+        }
     }
+    
 }
 
 export function teendo(){
@@ -22,15 +26,27 @@ export function teendo(){
         let ul = document.querySelector("ul");
         ul.appendChild(li);
 
-        li.innerHTML = uj;
+        li.innerHTML = "<input type='checkbox' class='box'>" + uj;
 
-        li.addEventListener("click", function(){
+        let box = document.querySelectorAll(".box")
+
+        for(let q = 0; q < box.length; q = q + 1){
+            box[q].addEventListener("change", function(e){
+                if(!e.target.checked){
+                    li.classList.remove("kesz");
+                }else{
+                    li.classList.add("kesz");
+                }
+            })
+        }
+
+        /* li.addEventListener("click", function(){
             if( li.classList.contains("kesz")){
                 li.classList.remove("kesz");
             }else{
                 li.classList.add("kesz");
             }
-        })
+        }) */
     })
 }
 
