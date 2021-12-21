@@ -32,6 +32,19 @@ export function teendo(){
             }
         })
     })
+}
 
+export function torles(){
+    let torlesbtn = document.querySelector("#delete");
+    
+    torlesbtn.addEventListener("click", function(){
+       let li = document.querySelectorAll("li"); 
 
+        for(let i = 0; i < li.length; i = i + 1){
+            if(li[i].classList.contains("kesz")){
+                li[i].remove();
+            }
+        }
+        
+    })
 }
