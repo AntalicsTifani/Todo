@@ -87,7 +87,8 @@ li{
 .box{
     width: 25px;
     height: 25px;
-    filter: hue-rotate(80deg);
+    /* filter: hue-rotate(80deg); */
+    accent-color: PapayaWhip;
 }
 
 #also{
