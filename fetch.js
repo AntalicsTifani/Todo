@@ -5,3 +5,17 @@ export function get(){
     .then(resp => resp.json())
 }
 
+export function postdata(){
+    let text = document.querySelector(".text");
+    return fetch(`${FIREBASE_DOMAIN}/todo.json`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            feladat: text.value
+        })
+       
+    })
+     .then(resp => resp.json())
+}
