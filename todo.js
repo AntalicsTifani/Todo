@@ -1,3 +1,5 @@
+import { get } from "./fetch.js";
+
 export function kihuzas(){
     let listaElem = document.querySelectorAll("li");
     let box = document.querySelectorAll(".box")
@@ -95,4 +97,31 @@ export function mutat(){
             }
         }
     })
+}
+
+export function adatok(){
+    get()
+    .then(adatok => {
+        let tomb = [];
+        for( let key in adatok){
+            let obj = {
+                id: key,
+                ...adatok[key]
+            }
+            tomb.push(obj);
+        }
+        
+        let ul = document.querySelector("ul");
+        
+
+        for(let i = 0; i < tomb.length; i = i + 1){
+            let li = document.createElement("li");
+            ul.appendChild(li);
+
+            li.innerHTML = "<input type='checkbox' class='box'> " +tomb[i].feladat;
+        }
+
+        kihuzas();
+    })
+
 }

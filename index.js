@@ -2,10 +2,15 @@ import { kihuzas,
         teendo, 
         torles, 
         elrejt,
-        mutat } from "./todo.js";
+        mutat,
+        adatok } from "./todo.js";
+
+
 
 kihuzas();
 teendo();
 torles();
 elrejt();
 mutat();
+adatok();
+
