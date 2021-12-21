@@ -3,7 +3,8 @@ import { kihuzas,
         torles, 
         elrejt,
         mutat,
-        adatok } from "./todo.js";
+        adatok,
+        id } from "./todo.js";
 
 
 
@@ -13,4 +14,5 @@ torles();
 elrejt();
 mutat();
 adatok();
+id();
 

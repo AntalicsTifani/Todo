@@ -1,3 +1,5 @@
+import { feladatId } from "./todo.js";
+
 const FIREBASE_DOMAIN = "https://todo-fd7fb-default-rtdb.europe-west1.firebasedatabase.app/";
 
 export function get(){
@@ -18,4 +20,11 @@ export function postdata(){
        
     })
      .then(resp => resp.json())
+}
+
+export function deletedata(){
+    return fetch(`${FIREBASE_DOMAIN}/todo/${feladatId}.json`, {
+        method: "DELETE"
+    })
+    .then(resp => resp.json())
 }

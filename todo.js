@@ -1,4 +1,6 @@
-import { get, postdata } from "./fetch.js";
+import { deletedata, get, postdata } from "./fetch.js";
+
+export let feladatId;
 
 export function kihuzas(){
     let listaElem = document.querySelectorAll("li");
@@ -29,7 +31,7 @@ export function teendo(){
             let ul = document.querySelector("ul");
             ul.appendChild(li);
 
-            li.innerHTML = "<input type='checkbox' class='box'>" + text.value;
+            li.innerHTML = `<input type='checkbox' class='box' value='${adatok.name}'> ${text.value}`;
 
             let lista = document.querySelectorAll("li");
 
@@ -61,13 +63,16 @@ export function torles(){
     let torlesbtn = document.querySelector("#delete");
     
     torlesbtn.addEventListener("click", function(){
-       let li = document.querySelectorAll("li"); 
+       deletedata()
+       .then(adatok => {
+           let li = document.querySelectorAll("li"); 
 
-        for(let i = 0; i < li.length; i = i + 1){
-            if(li[i].classList.contains("kesz")){
-                li[i].remove();
+            for(let i = 0; i < li.length; i = i + 1){
+                if(li[i].classList.contains("kesz")){
+                    li[i].remove();
+                }
             }
-        }
+       })
         
     })
 }
@@ -121,10 +126,21 @@ export function adatok(){
             let li = document.createElement("li");
             ul.appendChild(li);
 
-            li.innerHTML = "<input type='checkbox' class='box'> " +tomb[i].feladat;
+            li.innerHTML = `<input type='checkbox' class='box' value='${tomb[i].id}'> ${tomb[i].feladat}`;
         }
 
         kihuzas();
+        id();
     })
 }
 
+export function id(){
+    let checkBox = document.querySelectorAll(".box");
+
+    for(let i = 0; i < checkBox.length; i = i + 1){
+        checkBox[i].addEventListener("change", function(e){
+            feladatId = e.target.value
+        })
+    }
+    console.log(feladatId);
+}
