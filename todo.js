@@ -22,23 +22,32 @@ export function teendo(){
     
     newTeendo.addEventListener("click", function(){
 
+        
         let li = document.createElement("li");
         let ul = document.querySelector("ul");
         ul.appendChild(li);
 
         li.innerHTML = "<input type='checkbox' class='box'>" + text.value;
 
+        let lista = document.querySelectorAll("li");
+
         let box = document.querySelectorAll(".box")
 
         for(let q = 0; q < box.length; q = q + 1){
-            box[q].addEventListener("change", function(e){
-                if(!e.target.checked){
-                    li.classList.remove("kesz");
-                }else{
-                    li.classList.add("kesz");
-                }
-            })
+            for(let p = 0; p < lista.length; p = p + 1){
+                box[q].addEventListener("change", function(e){
+                    if(!e.target.checked){
+                        lista[q].classList.remove("kesz");
+                    }else{
+                        lista[q].classList.add("kesz");
+                    }
+                })
+            }
+            
+
         }
+
+        text.value = "";
 
     })
 }
@@ -55,5 +64,35 @@ export function torles(){
             }
         }
         
+    })
+}
+
+export function elrejt(){
+    let elrejtes = document.querySelector("#elrejtes");
+    
+
+
+    elrejtes.addEventListener("click", function(){
+        let li = document.querySelectorAll("li");
+
+        for(let i = 0; i < li.length; i = i + 1){
+            if( li[i].classList.contains("kesz")){
+                li[i].style.display = "none";
+            }
+        }
+    })
+}
+
+export function mutat(){
+    let mutatas = document.querySelector("#mutatas");
+
+    mutatas.addEventListener("click", function(){
+        let li = document.querySelectorAll("li");
+
+        for(let i = 0; i < li.length; i = i + 1){
+            if( li[i].classList.contains("kesz")){
+                li[i].style.display = "block";
+            }
+        }
     })
 }

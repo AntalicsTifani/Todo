@@ -1,5 +1,11 @@
-import { kihuzas, teendo, torles } from "./todo.js";
+import { kihuzas, 
+        teendo, 
+        torles, 
+        elrejt,
+        mutat } from "./todo.js";
 
 kihuzas();
 teendo();
 torles();
+elrejt();
+mutat();
