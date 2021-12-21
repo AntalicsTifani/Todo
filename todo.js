@@ -18,15 +18,15 @@ export function kihuzas(){
 
 export function teendo(){
     let newTeendo = document.querySelector("#new");
+    let text = document.querySelector(".text");
     
     newTeendo.addEventListener("click", function(){
-        let uj = prompt("Írj egy új teendőt");
 
         let li = document.createElement("li");
         let ul = document.querySelector("ul");
         ul.appendChild(li);
 
-        li.innerHTML = "<input type='checkbox' class='box'>" + uj;
+        li.innerHTML = "<input type='checkbox' class='box'>" + text.value;
 
         let box = document.querySelectorAll(".box")
 
@@ -40,13 +40,6 @@ export function teendo(){
             })
         }
 
-        /* li.addEventListener("click", function(){
-            if( li.classList.contains("kesz")){
-                li.classList.remove("kesz");
-            }else{
-                li.classList.add("kesz");
-            }
-        }) */
     })
 }
 
