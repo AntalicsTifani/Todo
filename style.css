@@ -1,3 +1,118 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+    background-color: tan;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+}
+
+#minden{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#kartya{
+    background-color: #dbc19d;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.75);
+    width: 550px;
+    
+}
+
+#felso{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+button{
+    margin-right: 10px;
+    font-family: 'Dancing Script', cursive;
+    background-color: tan;
+    color: white;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.75);
+    border: none;
+}
+
+button:hover {
+    background-color: #F5DEB3;
+}
+
+button:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#kozepso{
+    padding: 10px;
+    margin-left: 10px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    font-size: 25px;
+}
+
+.text{
+    border-radius: 12px;
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.75);
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+}
+
+.text:focus{
+    box-shadow: 0 0 14px white;
+    border: 1px solid white;
+    outline: none;
+}
+
+.box{
+    width: 25px;
+    height: 25px;
+}
+
+#also{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#elrejtes, #mutatas {
+    width: 300px;
+    height: 70px;
+}
+
+#kep{
+    background-image: url("pexels-andrew-neel-2312369.jpg");
+    height: 200px;
+    border-radius: 12px 12px 0 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
 .kesz{
     text-decoration: line-through;
 }
+

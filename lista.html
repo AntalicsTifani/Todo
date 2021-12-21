@@ -6,21 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button id="new">Új Teendő</button>
-    <button id="delete">Törlés</button>
-    <input type="text" class="text">
-    <div>
-        <ul>
-            <li><input type="checkbox" class="box">Tanuld meg a JavaScriptet</li>
-            <li><input type="checkbox" class="box">Gyakorolj sokat</li>
-            <li><input type="checkbox" class="box">Helyezkedj el</li>
-        </ul>
-    </div>
+    <div id="minden">
+        <div id="kartya">
+            <div id="kep"></div>
+            <div id="felso">
+                <button id="new">Új Teendő</button>
+                <button id="delete">Törlés</button>
+                <input type="text" class="text">
+            </div>
+            
+            <div id="kozepso">
+                <ul>
+                    <li><input type="checkbox" class="box">Tanuld meg a JavaScriptet</li>
+                    <li><input type="checkbox" class="box">Gyakorolj sokat</li>
+                    <li><input type="checkbox" class="box">Helyezkedj el</li>
+                </ul>
+            </div>
 
-    <button id="elrejtes">Elkészült feladatok elrejtése</button>
-    <button id="mutatas">Elkészült feladatok mutatása</button>
+            <div id="also">
+                <button id="elrejtes">Elkészült feladatok elrejtése</button>
+                <button id="mutatas">Elkészült feladatok mutatása</button>
+            </div>
+
+        </div>
+        
+    </div>
+    
 
     <script type="module" src="index.js"></script>
 </body>
